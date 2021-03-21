@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="DirectoryWindowController" customModule="Seeker" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="Zr0-mC-z0t" id="CMl-7D-Fhx"/>
+                <outlet property="infoLabel" destination="fhF-AP-JyI" id="vNw-GO-KGO"/>
+                <outlet property="infobarAccessoryVC" destination="bZK-IA-xmZ" id="Jeh-ze-N8y"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="documentWindow" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="760" height="427"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
+            <view key="contentView" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="760" height="427"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView wantsLayer="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UCO-db-xev">
+                        <rect key="frame" x="0.0" y="0.0" width="760" height="427"/>
+                        <clipView key="contentView" id="fkZ-CF-Qoh">
+                            <rect key="frame" x="0.0" y="0.0" width="760" height="427"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <collectionView id="Zr0-mC-z0t">
+                                    <rect key="frame" x="0.0" y="0.0" width="760" height="158"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="jKh-yG-tMf">
+                                        <size key="itemSize" width="50" height="50"/>
+                                    </collectionViewFlowLayout>
+                                    <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </collectionView>
+                            </subviews>
+                        </clipView>
+                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="cYv-iA-uN8">
+                            <rect key="frame" x="0.0" y="411" width="760" height="16"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                        <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="eeQ-jV-LUO">
+                            <rect key="frame" x="234" y="1" width="15" height="143"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </scroller>
+                    </scrollView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="UCO-db-xev" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="AYE-O5-yem"/>
+                    <constraint firstAttribute="bottom" secondItem="UCO-db-xev" secondAttribute="bottom" id="AzY-zY-tK2"/>
+                    <constraint firstAttribute="trailing" secondItem="UCO-db-xev" secondAttribute="trailing" id="h77-nY-c1f"/>
+                    <constraint firstItem="UCO-db-xev" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" id="vG5-0q-yny"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="-266" y="163"/>
+        </window>
+        <viewController id="bZK-IA-xmZ" customClass="NSTitlebarAccessoryViewController">
+            <connections>
+                <outlet property="view" destination="C7G-BO-ZJq" id="kSl-Lx-N6a"/>
+            </connections>
+        </viewController>
+        <customView id="C7G-BO-ZJq">
+            <rect key="frame" x="0.0" y="0.0" width="760" height="27"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6eE-CO-Ryu">
+                    <rect key="frame" x="6" y="6.5" width="15" height="14"/>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="squareshape.split.3x3" catalog="system" id="bip-a4-hQj"/>
+                </imageView>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fhF-AP-JyI">
+                    <rect key="frame" x="305" y="7" width="151" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="clipping" alignment="center" title="71 items, 94.8 MB available" id="eK9-Gt-dY2">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="6eE-CO-Ryu" firstAttribute="centerY" secondItem="C7G-BO-ZJq" secondAttribute="centerY" id="9We-Ok-5x9"/>
+                <constraint firstItem="fhF-AP-JyI" firstAttribute="centerY" secondItem="C7G-BO-ZJq" secondAttribute="centerY" id="K4w-ht-0Cc"/>
+                <constraint firstItem="fhF-AP-JyI" firstAttribute="centerX" secondItem="C7G-BO-ZJq" secondAttribute="centerX" id="wDc-FQ-v3E"/>
+                <constraint firstItem="6eE-CO-Ryu" firstAttribute="leading" secondItem="C7G-BO-ZJq" secondAttribute="leading" constant="6" id="wlC-OM-EnF"/>
+            </constraints>
+            <point key="canvasLocation" x="-266" y="-193"/>
+        </customView>
+        <collectionViewItem id="GrK-pL-fAb"/>
+    </objects>
+    <resources>
+        <image name="squareshape.split.3x3" catalog="system" width="15" height="14"/>
+    </resources>
+</document>

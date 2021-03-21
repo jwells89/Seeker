@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17701" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17701"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="GridIconCollectionViewItem" customModule="Seeker" customModuleProvider="target">
+            <connections>
+                <outlet property="iconView" destination="AF8-fI-zdv" id="tyj-SU-qgp"/>
+                <outlet property="label" destination="Olp-N4-19m" id="QAk-Hg-QxP"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="64" height="72"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AF8-fI-zdv">
+                    <rect key="frame" x="16" y="38" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="32" id="aQZ-da-obn"/>
+                        <constraint firstAttribute="height" constant="32" id="tYp-KZ-h4M"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="aaz-fp-NBk">
+                        <imageReference key="image" image="NSColorPanel" symbolScale="large"/>
+                    </imageCell>
+                </imageView>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Olp-N4-19m">
+                    <rect key="frame" x="-2" y="0.0" width="68" height="30"/>
+                    <textFieldCell key="cell" selectable="YES" continuous="YES" alignment="center" title="Multiline Label" id="VCB-Bo-bwz">
+                        <font key="font" metaFont="system" size="12"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+            </subviews>
+            <constraints>
+                <constraint firstItem="AF8-fI-zdv" firstAttribute="centerX" secondItem="Hz6-mo-xeY" secondAttribute="centerX" id="0Ni-dI-g4X"/>
+                <constraint firstItem="Olp-N4-19m" firstAttribute="top" secondItem="AF8-fI-zdv" secondAttribute="bottom" constant="8" symbolic="YES" id="BBT-ca-Gg2"/>
+                <constraint firstAttribute="bottom" secondItem="Olp-N4-19m" secondAttribute="bottom" id="HpM-jq-CAL"/>
+                <constraint firstItem="AF8-fI-zdv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="OYR-YD-I4n"/>
+                <constraint firstAttribute="trailing" secondItem="Olp-N4-19m" secondAttribute="trailing" id="OsM-ll-FJd"/>
+                <constraint firstItem="AF8-fI-zdv" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" id="lMX-E1-gT1"/>
+                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="AF8-fI-zdv" secondAttribute="trailing" id="v0g-Ug-sOx"/>
+                <constraint firstItem="Olp-N4-19m" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" id="vRw-PZ-iZ2"/>
+            </constraints>
+            <gestureRecognizers>
+                <clickGestureRecognizer delaysPrimaryMouseButtonEvents="YES" numberOfClicksRequired="2" id="xew-VO-Vic">
+                    <connections>
+                        <action selector="onDoubleClick:" target="-2" id="FGy-6b-HZE"/>
+                    </connections>
+                </clickGestureRecognizer>
+            </gestureRecognizers>
+            <point key="canvasLocation" x="-150" y="154"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSColorPanel" width="32" height="32"/>
+    </resources>
+</document>

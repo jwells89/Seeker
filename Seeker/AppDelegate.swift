@@ -11,11 +11,10 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    @IBOutlet weak var window: NSWindow!
-
+    let wc = DirectoryWindowController()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        wc.showWindow(self)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

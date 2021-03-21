@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,11 @@
 		5251CD7A23E3EB2900B489C9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5251CD7823E3EB2900B489C9 /* MainMenu.xib */; };
 		5251CD8623E3EB2900B489C9 /* SeekerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251CD8523E3EB2900B489C9 /* SeekerTests.swift */; };
 		5251CD9123E3EB2900B489C9 /* SeekerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5251CD9023E3EB2900B489C9 /* SeekerUITests.swift */; };
+		526BB5102607C56000EA010C /* DirectoryWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BB50E2607C56000EA010C /* DirectoryWindowController.swift */; };
+		526BB5112607C56000EA010C /* DirectoryWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BB50F2607C56000EA010C /* DirectoryWindowController.xib */; };
+		526BB5172607D19A00EA010C /* SwiftUTI in Frameworks */ = {isa = PBXBuildFile; productRef = 526BB5162607D19A00EA010C /* SwiftUTI */; };
+		526BB5202607DA1800EA010C /* GridIconCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BB51E2607DA1800EA010C /* GridIconCollectionViewItem.swift */; };
+		526BB5212607DA1800EA010C /* GridIconCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 526BB51F2607DA1800EA010C /* GridIconCollectionViewItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,10 @@
 		5251CD8C23E3EB2900B489C9 /* SeekerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeekerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5251CD9023E3EB2900B489C9 /* SeekerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeekerUITests.swift; sourceTree = "<group>"; };
 		5251CD9223E3EB2900B489C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		526BB50E2607C56000EA010C /* DirectoryWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryWindowController.swift; sourceTree = "<group>"; };
+		526BB50F2607C56000EA010C /* DirectoryWindowController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DirectoryWindowController.xib; sourceTree = "<group>"; };
+		526BB51E2607DA1800EA010C /* GridIconCollectionViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridIconCollectionViewItem.swift; sourceTree = "<group>"; };
+		526BB51F2607DA1800EA010C /* GridIconCollectionViewItem.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GridIconCollectionViewItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526BB5172607D19A00EA010C /* SwiftUTI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +105,10 @@
 			isa = PBXGroup;
 			children = (
 				5251CD7423E3EB2600B489C9 /* AppDelegate.swift */,
+				526BB50E2607C56000EA010C /* DirectoryWindowController.swift */,
+				526BB50F2607C56000EA010C /* DirectoryWindowController.xib */,
+				526BB51E2607DA1800EA010C /* GridIconCollectionViewItem.swift */,
+				526BB51F2607DA1800EA010C /* GridIconCollectionViewItem.xib */,
 				5251CD7623E3EB2900B489C9 /* Assets.xcassets */,
 				5251CD7823E3EB2900B489C9 /* MainMenu.xib */,
 				5251CD7B23E3EB2900B489C9 /* Info.plist */,
@@ -137,6 +151,9 @@
 			dependencies = (
 			);
 			name = Seeker;
+			packageProductDependencies = (
+				526BB5162607D19A00EA010C /* SwiftUTI */,
+			);
 			productName = Seeker;
 			productReference = 5251CD7123E3EB2600B489C9 /* Seeker.app */;
 			productType = "com.apple.product-type.application";
@@ -209,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 5251CD6823E3EB2600B489C9;
+			packageReferences = (
+				526BB5152607D19A00EA010C /* XCRemoteSwiftPackageReference "SwiftUTI" */,
+			);
 			productRefGroup = 5251CD7223E3EB2600B489C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -225,6 +245,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				526BB5212607DA1800EA010C /* GridIconCollectionViewItem.xib in Resources */,
+				526BB5112607C56000EA010C /* DirectoryWindowController.xib in Resources */,
 				5251CD7723E3EB2900B489C9 /* Assets.xcassets in Resources */,
 				5251CD7A23E3EB2900B489C9 /* MainMenu.xib in Resources */,
 			);
@@ -252,6 +274,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5251CD7523E3EB2600B489C9 /* AppDelegate.swift in Sources */,
+				526BB5202607DA1800EA010C /* GridIconCollectionViewItem.swift in Sources */,
+				526BB5102607C56000EA010C /* DirectoryWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,6 +449,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.wells.Seeker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -445,6 +470,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15.1;
 				PRODUCT_BUNDLE_IDENTIFIER = dev.wells.Seeker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -575,6 +601,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		526BB5152607D19A00EA010C /* XCRemoteSwiftPackageReference "SwiftUTI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mkeiser/SwiftUTI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		526BB5162607D19A00EA010C /* SwiftUTI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 526BB5152607D19A00EA010C /* XCRemoteSwiftPackageReference "SwiftUTI" */;
+			productName = SwiftUTI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5251CD6923E3EB2600B489C9 /* Project object */;
 }
